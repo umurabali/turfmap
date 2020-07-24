@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="./dragscroll.js"></script>
+</head>
+
+<body class="dragscroll">
+
+    <div class="map-container ">
+        <svg width="6000" height="6000">
+            <a target="_blank" href="https://x-rp.com/forum">
+                <path transform="matrix(1.7943263,0,0,0.88297872,-4059.4528,613.16562)"
+                    d="m 5040.67,4800.2394 -2.3923,-334.9282 334.9282,-2.3924 2.3924,334.9282 z"
+                    style="opacity:0.46129032;fill:#8fdd87;fill-opacity:1" />
+                <text id="text2111" y="4739.2344" x="5010.7656"
+                    style="font-size:96px;line-height:1.25;font-family:sans-serif" xml:space="preserve">
+                    <tspan y="4739.2344" x="5010.7656" id="tspan2109" sodipodi:role="line">YEŞİL ÇETE</tspan>
+                </text>
+            </a>
+
+            <a target="_blank" href="https://x-rp.com/forum/viewforum.php?f=32">
+                <rect y="4525.1196" x="4344.4976" height="302.63159" width="415.07178" id="rect1530"
+                    style="opacity:0.46129;fill:#8794dd;fill-opacity:1" />
+                <text id="text2115" y="4711.7227" x="4331.3398"
+                    style="font-size:96px;line-height:1.25;font-family:sans-serif" xml:space="preserve">
+                    <tspan y="4711.7227" x="4331.3398" id="tspan2113" sodipodi:role="line">EMNİYET</tspan>
+                </text>
+            </a>
+
+
+            <a target="_blank" href="https://x-rp.com/forum/viewforum.php?f=65">
+                <rect y="4047.8469" x="3943.7798" height="339.71292" width="589.71289" id="rect2103"
+                    style="opacity:0.46129;fill:#db87dd;fill-opacity:1" />
+                <text id="text2119" y="4244.019" x="4112.4404"
+                    style="font-size:96px;line-height:1.25;font-family:sans-serif" xml:space="preserve">
+                    <tspan y="4244.019" x="4112.4404" id="tspan2117" sodipodi:role="line">LGBT</tspan>
+                </text>
+            </a>
+
+
+
+        </svg>
+    </div>
+
+</body>
+<script>
+    $(document).ready(function () {
+
+        setTimeout(function () { window.scrollTo(1950, 2215); }, 100);
+        console.log("hey")
+
+    });
+
+    function getCursorPosition(canvas, event) {
+        const rect = canvas.getBoundingClientRect()
+        const x = event.clientX - rect.left
+        const y = event.clientY - rect.top
+        console.log("x: " + x + " y: " + y)
+    }
+
+    const canvas = document.querySelector('body')
+    canvas.addEventListener('mousedown', function (e) {
+        getCursorPosition(canvas, e)
+    })
+</script>
+
+</html>
